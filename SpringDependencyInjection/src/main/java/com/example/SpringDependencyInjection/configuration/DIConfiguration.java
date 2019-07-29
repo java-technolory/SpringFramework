@@ -20,7 +20,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackageClasses = MyApplication.class)
 public class DIConfiguration {
 
-    @Bean(value = "email")
+    @Bean
     public MessageService getMessageService(){
         return new EmailService();
     }

@@ -10,13 +10,13 @@ public class MyApplication {
 //    @Autowired
     private MessageService service;
 
-//    @Autowired
-//    public MyApplication(MessageService svc){
-//        this.service = svc;
-//    }
+    @Autowired
+    public MyApplication(MessageService svc){
+        this.service = svc;
+    }
 
     @Autowired
-    @Qualifier(value = "email")
+//    @Qualifier(value = "email")
     public void setService(MessageService svc){
         this.service = svc;
     }

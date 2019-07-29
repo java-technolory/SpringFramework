@@ -6,10 +6,13 @@ public class MyApplicationXML {
 
     private MessageService messageService;
 
+/*
     //constructor-based dependency injection
     public MyApplicationXML(MessageService msv) {
         this.messageService = msv;
     }
+
+*/
 
     //setter-based dependency injection
     public void setMessageService(MessageService msv) {
