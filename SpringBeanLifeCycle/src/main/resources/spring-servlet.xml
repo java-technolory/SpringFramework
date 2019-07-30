@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="persons" class="com.example.SpringBeanLifeCycle.bean.Person" init-method="init" destroy-method="destroy"
+          scope="singleton">
+        <constructor-arg name="name" value="Phan Van Hai"/>
+        <constructor-arg name="age" value="23"/>
+    </bean>
+
+    <!--  Inject Bean  -->
+    <bean id="order" class="com.example.SpringBeanLifeCycle.bean.Order">
+        <constructor-arg name="person" ref="persons"/>
+<!--        <property name="person" ref="persons"/>-->
+    </bean>
+
+    <bean id="order1" class="com.example.SpringBeanLifeCycle.bean.Order" autowire="constructor">
+    </bean>
+
+</beans>
