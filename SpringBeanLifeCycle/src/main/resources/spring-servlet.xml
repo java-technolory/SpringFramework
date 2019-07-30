@@ -15,7 +15,6 @@
 <!--        <property name="person" ref="persons"/>-->
     </bean>
 
-    <bean id="order1" class="com.example.SpringBeanLifeCycle.bean.Order" autowire="constructor">
-    </bean>
+    <bean id="order1" class="com.example.SpringBeanLifeCycle.bean.Order" autowire="constructor"></bean>
 
 </beans>
